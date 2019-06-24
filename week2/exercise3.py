@@ -56,9 +56,7 @@ def loops_1c(number_of_items=5, symbol="#"):
     string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
-    symbol = ["#"]
-    for index in range(5):
-        print(index)
+    return None
        
 
 
@@ -129,9 +127,7 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    my_list(range(0,9))
-    for index in range(len(my_list)):
-        print(index)
+    return None
 
 
 
@@ -160,6 +156,7 @@ def loops_5():
     you'll come to see the pros and cons of each over time.
     """
     return None
+
 
 
 def loops_6():

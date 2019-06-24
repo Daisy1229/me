@@ -56,10 +56,10 @@ def loops_1c(number_of_items=5, symbol="#"):
     string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
-    symbol = ["*"]
-    for index in range(5,6):
-        the_answer = symbol*index
-        return the_answer
+    symbol = ["#"]
+    for index in range(5):
+        print(index)
+       
 
 
 def loops_2():
@@ -80,11 +80,12 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    symbol = ["*"]*10
-    for column in range (10):
-        the_answer = print(symbol)
-    return   the_answer
-  
+    
+    my_list = ["*"]*10
+    for index in range (10,11):
+        return index
+
+
 
 def loops_3():
     """Make a rising block of numbers.
@@ -128,7 +129,10 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
+    my_list(range(0,9))
+    for index in range(len(my_list)):
+        print(index)
+
 
 
 def loops_5():

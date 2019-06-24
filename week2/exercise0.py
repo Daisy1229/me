@@ -47,7 +47,6 @@ def add_5(a_number):
     return the_answer
     
 
-
 def adder(a_number, another_number):
     """Add two numbers.
 

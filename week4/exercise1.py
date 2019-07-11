@@ -33,10 +33,16 @@ def get_some_details():
          dictionary, you'll need integer indeces for lists, and named keys for
          dictionaries.
     """
+    # open and read json files
     json_data = open(LOCAL + "/lazyduck.json").read()
-
+    # convert from json to string to a dictionary
     data = json.loads(json_data)
-    return {"lastName": None, "password": None, "postcodePlusID": None}
+    last_name = data["results"][0]["name"]["last"]
+    password = data["results"][0]["login"]["password"]
+    postcode = data["results"][0]["location"]["postcode"]
+    IDvalue= data["results"][0]["id"]["value"]
+    postcodePlusID = int(postcode) + int(IDvalue)
+    return {"lastName": last_name , "password": password, "postcodePlusID": postcodePlusID}
 
 
 def wordy_pyramid():
@@ -77,7 +83,7 @@ def wordy_pyramid():
     pass
 
 
-def wunderground():
+def pokedex(low=1, high=5):
     """Find the weather station for Sydney.
 
     Get some json from a request parse it and extract values.
@@ -88,19 +94,24 @@ def wunderground():
          get very long. If you are accessing a thing often, assign it to a
          variable and then future access will be easier.
     """
-    base = "http://api.wunderground.com/api/"
-    api_key = "YOUR KEY - REGISTER TO GET ONE"
-    country = "AU"
-    city = "Sydney"
-    template = "{base}/{key}/conditions/q/{country}/{city}.json"
-    url = template.format(base=base, key=api_key, country=country, city=city)
-    r = requests.get(url)
-    if r.status_code is 200:
-        the_json = json.loads(r.text)
-        obs = the_json["current_observation"]
+    template = "https://pokeapi.co/api/v2/pokemon/{id}"
 
-    return {"state": None, "latitude": None, "longitude": None, "local_tz_offset": None}
-
+    tallest_pokemon_height = -1
+    tallest_pokemon = None
+    for pokeID in range(low,high):
+        # the code in the loop
+        url = template.format(id=pokeID)
+        r = requests.get(url)
+        if r.status_code is 200:
+            one_poke = r.json()
+            if one_poke["height"] > tallest_pokemon_height:
+                tallest_pokemon = one_poke
+                tallest_pokemon_height = one_poke["height"]
+    return {
+        "name": tallest_pokemon["name"], 
+        "weight": tallest_pokemon["weight"], 
+        "height": tallest_pokemon["height"]}
+    
 
 def diarist():
     """Read gcode and find facts about it.
@@ -116,6 +127,12 @@ def diarist():
          the test will have nothing to look at.
     """
     pass
+    string_to_write = "SOMETHING"
+    A_PATH = '../course/my_file.wow'
+    f = open(A_PATH, 'w')
+    f.writ(string_to_write)
+    f.close()
+    print("DONE!")
 
 
 if __name__ == "__main__":

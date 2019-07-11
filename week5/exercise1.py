@@ -14,8 +14,9 @@ Some functions will have directions as external comments, once you think you
 are on top of it, take these comments out. Others won't have comments and
 you'll need to figure out for yourself what to do.
 """
-
-
+def countdown(message, start,stop, completion_message)
+    print(messgae)
+    print(stop)
 # This is a terrible function. The rest of the functions in this file do a
 # much better job of what it's trying to do. Once you've has a little look,
 # move on, and eventually delete this function. (And this comment!)
@@ -48,8 +49,6 @@ def do_bunch_of_bad_things():
 
 # return a list of countdown messages, much like in the bad function above.
 # It should say something different in the last message.
-def countdown(message, start, stop, completion_message):
-    pass
 
 
 # TRIANGLES
@@ -61,6 +60,14 @@ def countdown(message, start, stop, completion_message):
 # turned off by default but turned on with an optional argument.
 # The stub functions are made for you, and each one is tested, so this should
 # hand hold quite nicely.
+
+def countdown(message, start, stop, completion_message):
+    # 需要给他argument
+    return base**2
+
+hyp = calculate_hypotenuse(base, height)
+
+
 def calculate_hypotenuse(base, height):
     pass
 

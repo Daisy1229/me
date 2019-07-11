@@ -14,3 +14,5 @@ The parallel equal: Apple = 10
                     Banana = 10
                     Apple == Banana
 Question: I don't know how to debug the loops, I tried my best but still confused about the loops range and how to put them together and let them run.
+"!=" is not equal
+append: put it on the end

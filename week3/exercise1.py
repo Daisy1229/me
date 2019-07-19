@@ -39,9 +39,13 @@ def two_step_ranger(start, stop):
     Make a range function that always has a step size of 2
     """
     my_list = []
-    for i in range(start, stop):
+    
+    for i in range(start, stop,):
+        
             my_list.append(i)
-            i +=2
+            print(my_list)
+            my_list += 2
+    
     return my_list
   
   

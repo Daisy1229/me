@@ -239,16 +239,13 @@ def loops_7():
     lots of diagrams!
     """
     list1 = []
-    for a in range (1,6):
+    for a in range (5):
         list2 = []
-        for b in range (1,10):
-            x = 0
-            y = 5
-            if b > y - a and b > y+a:
-                list2.append("*")
-            else:
+        for b in range (9):
+            if b < (4 - a) or b > (4 + a):
                 list2.append(" ")
-            x = x+1
+            else:
+                list2.append("*")   
         list1.append(list2)
     return list1
     

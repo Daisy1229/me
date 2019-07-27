@@ -5,8 +5,8 @@ I know:
 3. whenyou wants to pick some value in dictionary, you just need to tap 'key' world
 4. pokemon website: https://pokeapi.co/api./v2/pokemon/ditto
 5. jsonedictionary:https://api.wordink.com/v4/words.json/randomWords
-joson edit online
-what means of joson_loods
+6. joson edit online
+7. what means of joson_loods
 
 a bba
-b aob
+b abb

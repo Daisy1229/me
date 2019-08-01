@@ -28,7 +28,7 @@ def lone_ranger(start, stop, step):
     """
     my_list = []
     for i in range(start, stop, step):
-            my_list.append(i)
+        my_list.append(i)
     return my_list
 
 
@@ -40,12 +40,8 @@ def two_step_ranger(start, stop):
     """
     my_list = []
     
-    for i in range(start, stop,):
-        
-            my_list.append(i)
-            print(my_list)
-            my_list += 2
-    
+    for i in range(start, stop, 2):
+        my_list.append(i)   
     return my_list
   
   
@@ -58,7 +54,14 @@ def stubborn_asker(low, high):
 
     Look up the docs for input
     """
-    return None
+    message = "Give the number between {low}, and {high}:".format(low=low,high=high)
+    while True:
+        input_number = int(input(message))
+        if low < input_number < high:
+            print("That's {} right".format(input_number))
+            return input_number
+        else:
+            print("Look carefully,please try again!")
 
 
 def not_number_rejector(message):
@@ -68,7 +71,15 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    return None
+    message = "Give a number: "
+    while True:
+        try:
+            input_number = int(input(message))
+            print("Thanks! {} looks good".format(input_number))
+            return input_number
+        except Exception as e:
+            print ("erro. you wot, try again {}".format(e))
+    
 
 
 def super_asker(low, high):
@@ -79,7 +90,19 @@ def super_asker(low, high):
     Try to call at least one of the other functions to minimise the
     amount of code.
     """
-    return None
+    message = "Give the number between {low}, and {high}:".format(low=low,high=high)
+    while True:
+        try:
+            input_number = int(input(message))
+            if low < input_number < high:
+                print("That's {} right".format(input_number))
+                return input_number
+            else:
+                print("Look carefully,please try again!")
+                return input_number
+        except Exception as e:
+            print ("erro. you wot, try again {}".format(e))
+    
 
 
 if __name__ == "__main__":

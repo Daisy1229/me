@@ -62,7 +62,7 @@ def do_bunch_of_bad_things():
 # hand hold quite nicely.
 
 def countdown(message, start, stop, completion_message):
-    # 需要给他argument
+    # need give an argument
     return base**2
 
 hyp = calculate_hypotenuse(base, height)

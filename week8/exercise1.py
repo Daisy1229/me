@@ -144,6 +144,14 @@ def make_filler_text_dictionary():
     """
 
     import requests
+    dict = {}
+    start = 3
+    stop = 7
+    for i in range(start, stop+1, 1):
+        number = str(i)
+    url_param = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength=18"
+
+
     
     
 
@@ -179,6 +187,7 @@ def fast_filler(number_of_words=200):
 
     If you get this one to work, you are a Very Good Programmer™!
     """
+
 
     return paragraph
 

@@ -149,7 +149,10 @@ def make_filler_text_dictionary():
     stop = 7
     for i in range(start, stop+1, 1):
         number = str(i)
-    url_param = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength=18"
+        url_param = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength=18"
+        url = str(url_param)
+        for i in range(3):
+            get_word = 
 
 
     

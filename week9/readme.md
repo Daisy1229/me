@@ -1,1 +1,3 @@
-TODO: Reflect on what you learned this week and what is still unclear.
+
+GIS
+Kaggle is a great website, there are lots of coding I can use directly.
